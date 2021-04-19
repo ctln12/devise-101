@@ -1,1 +1,10 @@
 <h1>My awesome app</h1>
+<p>Find me in app/views/pages/home.html.erb</p>
+
+<% if user_signed_in? %>
+  <p><%= current_user.email %></P>
+<% else %>
+  <p>No user is signed in</p>
+<% end %>
+
+<p>Number of users: <%= User.count %></p>
